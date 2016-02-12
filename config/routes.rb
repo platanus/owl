@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
- scope path: '/api' do
-   api_version(:module => "Api::V1", :path => {:value => "v1"}) do
-   end
- end
+  scope path: '/api' do
+    api_version(:module => "Api::V1", :path => {:value => "v1"}) do
+
+      get "webhooks/:provider" => "webhooks#ping", :defaults => { :format => 'json' }
+      post "webhooks/:provider" => "webhooks#register", :defaults => { :format => 'json' }
+
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
