@@ -7,7 +7,7 @@ class Api::V1::WebhooksController < Api::V1::BaseController
   end
 
   def register
-    Keen.publish(provider, params[:webhook])
+    Keen.publish(provider, params)
     respond_with({ status: "ok", service: provider })
   end
 
@@ -16,5 +16,4 @@ class Api::V1::WebhooksController < Api::V1::BaseController
   def provider
     @provider ||= params[:provider]
   end
-
 end
