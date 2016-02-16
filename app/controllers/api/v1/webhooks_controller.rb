@@ -7,7 +7,9 @@ class Api::V1::WebhooksController < Api::V1::BaseController
   end
 
   def register
-    Keen.publish(provider, params)
+    transformed_params = PayloadTransformer.new(provider, params, request.headers).transform
+    Keen.publish(provider, transformed_params)
+    
     respond_with({ status: "ok", service: provider })
   end
 
