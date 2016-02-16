@@ -18,6 +18,8 @@ class PayloadTransformer
       GithubPayloadTransformer.new @payload, @headers
     when "toggl"
       TogglPayloadTransformer.new @payload
+    when "trello"
+      TrelloPayloadTransformer.new @payload
     end
   end
 
