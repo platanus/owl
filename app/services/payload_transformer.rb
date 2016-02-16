@@ -16,6 +16,8 @@ class PayloadTransformer
     case @provider
     when "github"
       GithubPayloadTransformer.new @payload, @headers
+    when "toggl"
+      TogglPayloadTransformer.new @payload
     end
   end
 
