@@ -8,7 +8,7 @@ Rails.application.configure do
   config.assets.compile = false
   config.assets.digest = true
   config.log_level = :debug
-  config.action_mailer.default_options = {from: ENV['DEFAULT_EMAIL_ADDRESS']}
+  config.action_mailer.default_options = { from: ENV['DEFAULT_EMAIL_ADDRESS'] }
   config.i18n.fallbacks = true
   config.active_support.deprecation = :notify
   config.log_formatter = ::Logger::Formatter.new
