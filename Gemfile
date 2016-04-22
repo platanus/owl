@@ -19,6 +19,10 @@ gem 'active_model_serializers', '~> 0.9.3'
 gem 'simple_token_authentication', '~> 1.0'
 gem 'rack-cors', '~> 0.4.0'
 gem 'keen'
+gem 'togglv8'
+gem 'faraday'
+gem 'slack-ruby-client'
+
 
 group :production, :staging do
   gem 'rails_stdout_logging'
@@ -26,6 +30,7 @@ group :production, :staging do
 end
 
 group :development, :test do
+  gem 'awesome_print'
   gem 'dotenv-rails'
   gem 'pry-rails'
   gem 'pry-byebug'
