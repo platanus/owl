@@ -22,7 +22,7 @@ gem 'keen'
 gem 'togglv8'
 gem 'faraday'
 gem 'slack-ruby-client'
-
+gem 'clockwork'
 
 group :production, :staging do
   gem 'rails_stdout_logging'

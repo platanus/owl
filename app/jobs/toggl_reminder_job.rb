@@ -2,6 +2,7 @@ class TogglReminderJob < ActiveJob::Base
   queue_as :default
 
   def perform(*args)
+    puts "Running the beast..."
     # sacar usuarios de team.json
     pts = PlatanusTeamService.new
     pts.members_with_toggl_keys.each do |member|

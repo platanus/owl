@@ -49,6 +49,9 @@ GEM
     bcrypt (3.1.11)
     builder (3.2.2)
     byebug (8.2.2)
+    clockwork (2.0.0)
+      activesupport
+      tzinfo
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -279,6 +282,7 @@ DEPENDENCIES
   active_model_serializers (~> 0.9.3)
   awesome_print
   aws-sdk (< 2)
+  clockwork
   coffee-rails (~> 4.1.0)
   dotenv-rails
   factory_girl_rails
