@@ -1,0 +1,3 @@
+describe SlackBotService do
+
+end
